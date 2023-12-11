@@ -17,11 +17,14 @@ function getComputerChoice() {
     }
 }
 
+function getUserInput() {
+    let userInput = prompt("Type Rock Paper or Scissors:");
+    //get users input
+    let playerSelection = userInput.charAt(0).toUpperCase() + userInput.slice(1);
+    //converts users input to proper case to ignore case errors
+    return playerSelection;
+}
 
-const userInput = prompt("Type Rock Paper or Scissors:");
-//get users input
-const playerSelection = userInput.charAt(0).toUpperCase() + userInput.slice(1);
-//converts users input to proper case to ignore case errors
 
 function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
@@ -52,5 +55,15 @@ function playRound(playerSelection) {
     }
 }
 
-playRound(playerSelection);
-// shows result after input is made
+function game() {
+    playerSelection = getUserInput();
+    playRound(playerSelection);
+    playerSelection = getUserInput();
+    playRound(playerSelection);
+    playerSelection = getUserInput();
+    playRound(playerSelection);
+    playerSelection = getUserInput();
+    playRound(playerSelection);
+    playerSelection = getUserInput();
+    playRound(playerSelection);
+}
